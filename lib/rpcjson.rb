@@ -39,7 +39,7 @@ class RPC
 
         # params are expected always in 1.0/1.1. Not required in 2.0.
         if @version < 2.0 or (args != nil and args.length != 0)
-          json['params'] = args
+          json['params'] = args.first
         end
 
         body = JSON(json)
